@@ -1,0 +1,105 @@
+[global_config]
+  window_state = hidden
+  borderless = True
+  tab_position = hidden
+[keybindings]
+[profiles]
+  [[default]]
+    background_color = "#232428"
+    background_darkness = 0.8
+    background_type = transparent
+    cursor_shape = ibeam
+    cursor_fg_color = "#131116"
+    cursor_bg_color = "#305a94"
+    font = Hasklug Nerd Font Medium 14
+    foreground_color = "#de3dd3"
+    scrollback_lines = 1024
+    palette = "#e573ff:#dc322f:#57e389:#e5a50a:#268bd2:#d33682:#ed333b:#62a0ea:#3584e4:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+    title_transmit_bg_color = "#62a0ea"
+    title_use_system_font = False
+    title_font = Hasklug Nerd Font Propo Light 10
+  [[skunkstuff]]
+    background_color = "#131116"
+    font = Fira Code Medium 10
+    foreground_color = "#d0f2fd"
+    palette = "#131116:#13bef6:#ca02b3:#77797e:#232428:#333333:#414141:#595959:#707070:#8a8a8a:#a4a4a4:#bebebe:#13bef6:#42cbf8:#71d8fa:#a1e5fc"
+    use_system_font = False
+    title_transmit_fg_color = "#ca02b3"
+    title_transmit_bg_color = "#13bef6"
+    title_receive_fg_color = "#3d3846"
+    title_receive_bg_color = "#3d3846"
+    title_inactive_fg_color = "#813d9c"
+    title_inactive_bg_color = "#ca02b3"
+    title_use_system_font = False
+    title_font = Fira Code Medium 10
+  [[nord]]
+    background_color = "#070508"
+    background_darkness = 0.85
+    background_type = transparent
+    cursor_fg_color = "#2e3440"
+    cursor_bg_color = "#d8dee9"
+    font = Hasklug Nerd Font Mono Medium 14
+    foreground_color = "#D8DEE9"
+    palette = "#3B4252:#BF616A:#A3BE8C:#EBCB8B:#81A1C1:#B48EAD:#88C0D0:#E5E9F0:#4C566A:#BF616A:#A3BE8C:#EBCB8B:#81A1C1:#B48EAD:#8FBCBB:#ECEFF4"
+    use_system_font = False
+    use_theme_colors = True
+    bold_is_bright = True
+    copy_on_selection = True
+    title_transmit_bg_color = "#3b4252"
+    title_use_system_font = False
+    title_font = Hasklug Nerd Font Propo Bold 10
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = nord
+  [[Skunkstuff]]
+    [[[child0]]]
+      type = Window
+      parent = ""
+      order = 0
+      position = 1920:0
+      maximised = False
+      fullscreen = False
+      size = 956, 1048
+      title = sylow@Stripetail:~
+      last_active_term = 9ee39f28-05e1-4427-9a81-5274200f2991
+      last_active_window = True
+    [[[child1]]]
+      type = HPaned
+      parent = child0
+      order = 0
+      position = 251
+      ratio = 0.26393270241850686
+    [[[terminal2]]]
+      type = Terminal
+      parent = child1
+      order = 0
+      profile = skunkstuff
+      uuid = fefef87f-b6b3-4656-9e23-8e3241f4edcc
+    [[[child3]]]
+      type = VPaned
+      parent = child1
+      order = 1
+      position = 611
+      ratio = 0.585810162991371
+    [[[terminal4]]]
+      type = Terminal
+      parent = child3
+      order = 0
+      profile = skunkstuff
+      uuid = 9ee39f28-05e1-4427-9a81-5274200f2991
+    [[[terminal5]]]
+      type = Terminal
+      parent = child3
+      order = 1
+      profile = skunkstuff
+      uuid = 2addbc95-79ed-476b-899c-4270b983af3f
+[plugins]
