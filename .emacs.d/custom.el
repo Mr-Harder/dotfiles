@@ -1,32 +1,126 @@
+;; -*- lexical-binding: t; -*-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(LaTeX-amsmath-label "eq:")
+ '(LaTeX-default-author "Steven Harder")
+ '(LaTeX-default-environment "align*")
+ '(LaTeX-default-style "skunkprint")
+ '(LaTeX-electric-left-right-brace t)
+ '(LaTeX-indent-level 4)
+ '(LaTeX-item-indent 4)
+ '(TeX-auto-save t)
+ '(TeX-electric-escape t)
+ '(TeX-electric-math '("\\(" . "\\)"))
+ '(TeX-electric-sub-and-superscript t)
+ '(TeX-engine 'luatex)
+ '(TeX-master nil)
+ '(TeX-output-dir nil)
+ '(TeX-parse-self t)
+ '(auto-save-interval 50)
+ '(auto-save-list-file-prefix "~/.emacs.d/auto-save-list/.saves-")
+ '(auto-save-timeout 10)
+ '(auto-save-visited-mode t)
+ 
+ '(codeium/metadata/api_key "")
+ 
  '(custom-enabled-themes '(nord))
  '(custom-safe-themes
-   '("4c7228157ba3a48c288ad8ef83c490b94cb29ef01236205e360c2c4db200bb18" default))
+   '("b917fe6323b503019abd5fb54ef09ceec06b1bd5384e03b64248f1d3c3df1a35" "ea9404b3a5398b0697c2ab136efcb35cad92b1a6a12025dd099e2494efda905c" "b5b6396361db4bee9b0c0d7ea678b96b3b55e4217c610038c8d289eb05c426ef" "aa742450bc84284415b398be20bfe1c7e63b58fbbc4beb4f2709ce08f2ca3c92" "7c7026a406042e060bce2b56c77d715c3a4e608c31579d336cb825b09e60e827" "4c7228157ba3a48c288ad8ef83c490b94cb29ef01236205e360c2c4db200bb18" default))
+ '(dashboard-agenda-prefix-format " %i%?-12:c%t% s")
+ '(dashboard-agenda-time-string-format "%Y-%m-%d %a %H:%M")
+ '(dashboard-center-content t)
+ '(dashboard-display-icons-p 'display-graphic-p)
+ '(dashboard-icon-type '\'nerd-icons)
+ '(dashboard-image-banner-max-height 16)
+ '(dashboard-set-file-icons t)
+ '(dashboard-set-heading-icons t)
+ '(dashboard-set-navigator t)
+ '(dashboard-startup-banner "/home/Stripetail/Downloads/Skunktail_S_256.webp")
+ '(desktop-auto-save-timeout 30)
+ '(fancy-splash-image "~/Downloads/Skunktail_S.png")
+ '(font-latex-fontify-sectioning 1.15)
+ '(global-jinx-mode t)
+ '(global-prettify-symbols-mode t)
+ '(global-visual-line-mode t)
+ '(ignored-local-variable-values '((TeX-engine . lualatex)))
+ '(initial-buffer-choice nil)
+ '(jinx-languages "en_CA-large")
+ '(latex-indent-within-escaped-parens t)
+ '(menu-bar-mode nil)
+ '(mouse-wheel-progressive-speed t)
+ '(org-agenda-files '("~/org/Agenda.org"))
+ '(org-babel-load-languages '((emacs-lisp . t)))
+ '(org-confirm-babel-evaluate nil)
+ '(org-format-latex-header
+   "\\documentclass{skunkprint}\12\\usepackage[usenames]{color}\12[DEFAULT-PACKAGES]\12[PACKAGES]\12\\pagestyle{empty}             % do not remove\12% The settings below are copied from fullpage.sty\12%\\setlength{\\textwidth}{\\paperwidth}\12%\\addtolength{\\textwidth}{-3cm}\12%\\setlength{\\oddsidemargin}{1.5cm}\12%\\addtolength{\\oddsidemargin}{-2.54cm}\12%\\setlength{\\evensidemargin}{\\oddsidemargin}\12%\\setlength{\\textheight}{\\paperheight}\12%\\addtolength{\\textheight}{-\\headheight}\12%\\addtolength{\\textheight}{-\\headsep}\12%\\addtolength{\\textheight}{-\\footskip}\12%\\addtolength{\\textheight}{-3cm}\12%\\setlength{\\topmargin}{1.5cm}\12%\\addtolength{\\topmargin}{-2.54cm}")
+ '(org-support-shift-select 'always)
  '(package-selected-packages
-   '(latex-table-wizard async which-key eat editorconfig crdt org-contrib markdown-mode auctex rust-mode haskell-mode magit corfu consult vertico)))
+   '(latex-table-wizard async which-key eat editorconfig crdt org-contrib markdown-mode auctex rust-mode haskell-mode magit corfu consult vertico))
+ '(pdf-view-continuous nil)
+ '(preview-TeX-style-dir "/home/Stripetail/.emacs.d/elpa/auctex-13.3.0/latex")
+ '(preview-auto-cache-preamble t)
+ '(preview-scale-function 0.5)
+ '(pyvenv-virtualenvwrapper-python "~/.local/bin/ipython3")
+ '(rainbow-delimiters-max-face-count 8)
+ '(rainbow-identifiers-face-count 8)
+ '(safe-local-variable-values '((TeX-master . TeX-master:)))
+ '(solaire-global-mode t)
+ '(solaire-global-mode-hook
+   '(solaire-mode-swap-faces-maybe solaire-mode-fix-minibuffer))
+ '(vertico-posframe-mode t)
+ '(warning-suppress-log-types
+   '(((copilot copilot-no-mode-indent))
+     ((copilot copilot-no-mode-indent))
+     ((copilot copilot-no-mode-indent))
+     ((copilot copilot-no-mode-indent))))
+ '(warning-suppress-types
+   '(((copilot copilot-no-mode-indent))
+     ((copilot copilot-no-mode-indent))
+     (emacs)
+     ((copilot copilot-no-mode-indent))
+     (comp)
+     (emacs))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(fringe ((t :background "gray20")))
- '(header-line ((t :box (:line-width 4 :color "gray20" :style nil))))
+ '(fringe ((t :background "#121212")))
+ '(header-line ((t :box (:line-width 4 :color "#434c5e" :style nil))))
  '(header-line-highlight ((t :box (:color "white smoke"))))
  '(keycast-key ((t)))
  '(line-number ((t :background "gray20")))
- '(mode-line ((t :box (:line-width 6 :color "gray30" :style nil))))
+ '(mode-line ((t :box (:line-width 6 :color "#4c566a" :style nil))))
  '(mode-line-active ((t :box (:line-width 6 :color "gray30" :style nil))))
- '(mode-line-highlight ((t :box (:color "white smoke"))))
- '(mode-line-inactive ((t :box (:line-width 6 :color "gray30" :style nil))))
- '(tab-bar-tab ((t :box (:line-width 4 :color "grey" :style nil))))
- '(tab-bar-tab-inactive ((t :box (:line-width 4 :color "grey" :style nil))))
- '(window-divider ((t :background "gray20" :foreground "gray20")))
- '(window-divider-first-pixel ((t :background "gray20" :foreground "gray20")))
- '(window-divider-last-pixel ((t :background "gray20" :foreground "gray20"))))
+ '(mode-line-highlight ((t :box (:color "#d8dee9"))))
+ '(mode-line-inactive ((t :box (:line-width 6 :color "#2e3440" :style nil))))
+ '(rainbow-delimiters-base-error-face ((t (:inherit rainbow-delimiters-base-face :foreground "#BF616A"))))
+ '(rainbow-delimiters-depth-2-face ((t (:foreground "#B48EAD"))))
+ '(rainbow-delimiters-depth-3-face ((t (:foreground "#88C0D0"))))
+ '(rainbow-delimiters-depth-4-face ((t (:foreground "#A3BE8C"))))
+ '(rainbow-delimiters-depth-5-face ((t (:foreground "#81A1C1"))))
+ '(rainbow-delimiters-depth-6-face ((t (:foreground "#EBCB8B"))))
+ '(rainbow-delimiters-depth-7-face ((t (:foreground "#5E81AC"))))
+ '(rainbow-delimiters-depth-8-face ((t (:foreground "#D08770"))))
+ '(rainbow-identifiers-identifier-1 ((t (:foreground "#8FBCBB"))))
+ '(rainbow-identifiers-identifier-2 ((t (:foreground "#B48EAD"))))
+ '(rainbow-identifiers-identifier-3 ((t (:foreground "#88C0D0"))))
+ '(rainbow-identifiers-identifier-4 ((t (:foreground "#A3BE8C"))))
+ '(rainbow-identifiers-identifier-5 ((t (:foreground "#81A1C1"))))
+ '(rainbow-identifiers-identifier-6 ((t (:foreground "#EBCB8B"))))
+ '(rainbow-identifiers-identifier-7 ((t (:foreground "#5E81AC"))))
+ '(rainbow-identifiers-identifier-8 ((t (:foreground "#D08770"))))
+ '(rainbow-identifiers-identifier-9 ((t (:foreground "#BF616A"))))
+ '(solaire-fringe-face ((t (:inherit nordic-midnight))))
+ '(spell-fu-incorrect-face ((t (:underline (:color "#bf616a" :style wave :position nil)))))
+ '(tab-bar-tab ((t :box (:line-width 4 :color "#4c566a" :style nil))))
+ '(tab-bar-tab-inactive ((t :box (:line-width 4 :color "#2e3440" :style nil))))
+ '(window-divider ((t :background "#121212" :foreground "#121212")))
+ '(window-divider-first-pixel ((t :background "#121212" :foreground "#121212")))
+ '(window-divider-last-pixel ((t :background "#121212" :foreground "#121212"))))
 ;; git submodule add https://github.com/zerolfx/copilot.el
 ;; git submodule update --init
 (require 'cl)
@@ -285,7 +379,7 @@ cleared, make sure the overlay doesn't come back too soon."
     (add-hook 'after-make-frame-functions
         (lambda (frame)
             (with-selected-frame frame
-              (load-theme 'nord t)
+              (load-theme 'nordic-night t)
 	      (cp-fix)
 	      (rainbow-delimiters-mode 1)
 	      (setq-default line-spacing 0.2)
@@ -296,14 +390,182 @@ cleared, make sure the overlay doesn't come back too soon."
 	      (solaire-global-mode 1)
 	      )	    
 	    ))
-  (load-theme 'nord t)
+  (load-theme 'nordic-night t)
   (copilot-mode 1)
   (company-box-mode 1)
   (rainbow-delimiters-mode 1)
   (prettify-symbols-mode 1)
  
   )
-(setq chatgpt-shell-openai-key "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")
+
+(setq rainbow-delimiters-global-mode t)
+(setq prettify-symbols-global-mode t)
+(setq tool-bar-mode nil)
+(setq menu-bar-mode nil)
+(cp-fix)
+
+;;; Scrolling.
+;; Good speed and allow scrolling through large images (pixel-scroll).
+;; Note: Scroll lags when point must be moved but increasing the number
+;;       of lines that point moves in pixel-scroll.el ruins large image
+;;       scrolling. So unfortunately I think we'll just have to live with
+;;       this.
+
+(pixel-scroll-mode t)
+(setq pixel-resolution-fine-flag t)
+;(setq mouse-wheel-scroll-amount '(1))
+(setq pixel-dead-time 0)
+(setq fast-but-imprecise-scrolling t)
+(setq jit-lock-defer-time 0)
+(setq mouse-wheel-progressive-speed nil)
 
 
+(defun fix-gpt-key ()
+  (interactive)
+(setq chatgpt-shell-openai-key ""))
+(defun wrap-with-delimiters (begin-delimiter end-delimiter &optional arg)
+  (interactive "sBegin delimiter: \nsEnd delimiter: \nP")
+  (let ((beg (if (region-active-p) (region-beginning) (point)))
+        (end (if (region-active-p) (region-end) (point))))
+    (goto-char beg)
+    (insert (if arg begin-delimiter ""))
+    (goto-char end)
+    (insert (if arg end-delimiter ""))
+    (if arg (forward-char (length end-delimiter)))))
 
+(global-set-key (kbd "C-c C-l \\") (lambda () (interactive) (wrap-with-delimiters "\\(" "\\)" t)))
+(global-set-key (kbd "C-c C-l [") (lambda () (interactive) (wrap-with-delimiters "\\[" "\\]" t)))
+(global-set-key (kbd "C-c C-l {") (lambda () (interactive) (wrap-with-delimiters "\\{" "\\}" t)))
+
+(setq dashboard-agenda-sort-strategy '(time-up priority-down category-keep))
+
+;; (defun display-startup-image-in-scratch ()
+;;  (let* ((buffer (get-buffer "*scratch*"))
+;;         (window (get-buffer-window buffer))
+;;         (width (window-width window))
+;;         (image-width (car (image-size (create-image (or fancy-splash-image "/path/to/your/image.png")) ) 'pixels))) ;; get the width of the image.
+;;         (padding (make-string (max 0 (floor (/ (- width image-width) 2))) ?\ )))   ;; decide the padding
+;;    (save-excursion
+;;      (set-buffer buffer)
+;;      (insert padding)
+;;      (insert-image (create-image (or fancy-splash-image "/path/to/your/image.png")))
+;;      (goto-char (point-max)))))
+; use (dashboard-open) when a new frame is created
+; (add-hook 'after-make-frame-functions (lambda (frame) (dashboard-open frame)))
+
+;; (add-hook 'after-init-hook #'display-startup-image-in-scratch)
+
+(setq dashboard-items '((recents   . 7)
+                        (bookmarks . 5)
+                        (projects  . 5)
+                        (agenda    . 5)
+                        (registers . 5)))
+
+(setq dashboard-display-icons-p t) ;; display icons on both GUI and terminal
+(setq dashboard-icon-type 'nerd-icons) ;; use `nerd-icons' package
+(setq dashboard-set-heading-icons t)
+(setq dashboard-set-file-icons t)
+(setq dashboard-set-navigator t)
+(setq dashboard-set-init-info t)
+(add-to-list 'dashboard-items '(agenda) t)
+(setq initial-buffer-choice (lambda () (get-buffer-create "*dashboard*")))
+(setq dashboard-image-banner-max-height 16) 
+
+(setq plstore-cache-passphrase-for-symmetric-encryption t)
+
+(setq org-gcal-client-id ""
+      org-gcal-client-secret "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"
+      org-gcal-fetch-file-alist '(("steven.harder@ucalgary.ca" .  "~/org/schedule.org"))
+      )
+(require 'org-gcal)
+(use-package ess
+  :ensure t
+  :config
+  (require 'ess-site))
+;; Require ESS immediately after installation
+(require 'ess-site)
+
+(add-hook 'create-frame-hook
+	  (lambda (frame)
+	    (with-selected-frame frame
+	      (cp-fix)
+	      (rainbow-delimiters-mode 1)
+	      (rainbow-identifiers-mode 1)
+	      (fix-gpt-key)
+	      (setq-default line-spacing 0.5))))
+	      
+	      
+	      
+
+(require 'ess-site t)
+(require 'ess-r-mode)
+(require 'ob-R)
+ (add-hook 'org-mode-hook
+    (lambda ()
+      (setq spell-fu-faces-exclude '(org-meta-line))
+      (jinx-mode)))
+	      
+(use-package org
+  :ensure t
+  :straight nil
+  :config
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '((python  . t)
+     (clojure . t)
+     (cpp     . t)
+     (elisp   . t)
+     (haskell . t)
+     (scheme  . t)
+     (shell   . t)
+     (C       . t)
+     (R       . t)
+     )))
+
+
+(defun show-color-reminder ()
+  "Show a popup with LaTeX color names in their respective colors."
+  (interactive)
+  (let ((color-names '("nord0" "nord1" "nord2" "nord3" "nord4"
+                       "nord5" "nord6" "nord7" "nord8" "nord9" "nord10"
+                       "nord11" "nord12" "nord13" "nord14" "nord15"))
+        (color-codes '("#2E3440" "#3B4252" "#434C5E" "#4C566A"
+		       "#D8DEE9" "#E5E9F0" "#ECEFF4" "#8FBCBB"
+		       "#88C0D0" "#81A1C1" "#5E81AC" "#BF616A"
+		       "#D08770" "#EBCB8B" "#A3BE8C" "#B48EAD"))
+        (buf (get-buffer-create "*Color Reminder*")))
+    (with-current-buffer buf
+      (erase-buffer)
+      (insert "|")
+      (cl-loop for name in color-names
+               for code in color-codes
+               for i from 1 to (length color-names)
+               do
+               (insert (propertize (format " %s  " name)
+                                   'face `(:background ,code :foreground "black"))
+                       "|")
+               (when (zerop (mod i 4))
+                 (insert "\n|")))
+      (insert "\n"))
+    (display-buffer buf)))
+
+(global-set-key (kbd "C-c C-l C-c") 'show-color-reminder)
+
+(add-to-list 'org-latex-classes
+                '("skunkprint"
+                  "\\documentclass{skunkprint}"
+                  ("\\chapter{%s}" . "\\chapter*{%s}")
+                  ("\\section{%s}" . "\\section*{%s}")
+                  ("\\subsection{%s}" . "\\subsection*{%s}")
+                  ("\\subsubsection{%s}" . "\\subsubsection*{%s}")))
+
+
+(setq TeX-auto-save t)
+(setq TeX-parse-self t)
+(setq-default TeX-master nil)
+
+(add-hook 'LaTeX-mode-hook
+	  (lambda ()
+	    (wc-mode)
+	    (jinx-mode)))
+	     
