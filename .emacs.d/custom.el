@@ -11,21 +11,20 @@
  '(LaTeX-electric-left-right-brace t)
  '(LaTeX-indent-level 4)
  '(LaTeX-item-indent 4)
- '(TeX-auto-save t)
+ '(LaTeX-mode-hook '(preview-mode-setup LaTeX-math-mode olivetti-mode) t)
+ '(TeX-auto-save t t)
  '(TeX-electric-escape t)
  '(TeX-electric-math '("\\(" . "\\)"))
  '(TeX-electric-sub-and-superscript t)
  '(TeX-engine 'luatex)
- '(TeX-master nil)
+ '(TeX-master nil t)
  '(TeX-output-dir nil)
- '(TeX-parse-self t)
+ '(TeX-parse-self t t)
  '(auto-save-interval 50)
  '(auto-save-list-file-prefix "~/.emacs.d/auto-save-list/.saves-")
  '(auto-save-timeout 10)
  '(auto-save-visited-mode t)
- 
- '(codeium/metadata/api_key "")
- 
+ '(codeium/metadata/api_key "b9d2378f-757b-4054-9bc5-bd4822a98cec")
  '(custom-enabled-themes '(nord))
  '(custom-safe-themes
    '("b917fe6323b503019abd5fb54ef09ceec06b1bd5384e03b64248f1d3c3df1a35" "ea9404b3a5398b0697c2ab136efcb35cad92b1a6a12025dd099e2494efda905c" "b5b6396361db4bee9b0c0d7ea678b96b3b55e4217c610038c8d289eb05c426ef" "aa742450bc84284415b398be20bfe1c7e63b58fbbc4beb4f2709ce08f2ca3c92" "7c7026a406042e060bce2b56c77d715c3a4e608c31579d336cb825b09e60e827" "4c7228157ba3a48c288ad8ef83c490b94cb29ef01236205e360c2c4db200bb18" default))
@@ -33,43 +32,68 @@
  '(dashboard-agenda-time-string-format "%Y-%m-%d %a %H:%M")
  '(dashboard-center-content t)
  '(dashboard-display-icons-p 'display-graphic-p)
- '(dashboard-icon-type '\'nerd-icons)
+ '(dashboard-icon-type 'nerd-icons)
  '(dashboard-image-banner-max-height 16)
  '(dashboard-set-file-icons t)
  '(dashboard-set-heading-icons t)
  '(dashboard-set-navigator t)
  '(dashboard-startup-banner "/home/Stripetail/Downloads/Skunktail_S_256.webp")
  '(desktop-auto-save-timeout 30)
+ '(display-battery-mode t)
+ '(display-time-day-and-date t)
+ '(display-time-mode t)
  '(fancy-splash-image "~/Downloads/Skunktail_S.png")
+ '(fast-but-imprecise-scrolling nil)
+ '(fill-column 90)
  '(font-latex-fontify-sectioning 1.15)
  '(global-jinx-mode t)
  '(global-prettify-symbols-mode t)
  '(global-visual-line-mode t)
+ '(gptel-api-key "sk-/.../")
+ '(gptel-model "gpt-4o")
  '(ignored-local-variable-values '((TeX-engine . lualatex)))
  '(initial-buffer-choice nil)
  '(jinx-languages "en_CA-large")
  '(latex-indent-within-escaped-parens t)
  '(menu-bar-mode nil)
+ '(mouse-scroll-min-lines 1)
  '(mouse-wheel-progressive-speed t)
  '(org-agenda-files '("~/org/Agenda.org"))
  '(org-babel-load-languages '((emacs-lisp . t)))
  '(org-confirm-babel-evaluate nil)
  '(org-format-latex-header
    "\\documentclass{skunkprint}\12\\usepackage[usenames]{color}\12[DEFAULT-PACKAGES]\12[PACKAGES]\12\\pagestyle{empty}             % do not remove\12% The settings below are copied from fullpage.sty\12%\\setlength{\\textwidth}{\\paperwidth}\12%\\addtolength{\\textwidth}{-3cm}\12%\\setlength{\\oddsidemargin}{1.5cm}\12%\\addtolength{\\oddsidemargin}{-2.54cm}\12%\\setlength{\\evensidemargin}{\\oddsidemargin}\12%\\setlength{\\textheight}{\\paperheight}\12%\\addtolength{\\textheight}{-\\headheight}\12%\\addtolength{\\textheight}{-\\headsep}\12%\\addtolength{\\textheight}{-\\footskip}\12%\\addtolength{\\textheight}{-3cm}\12%\\setlength{\\topmargin}{1.5cm}\12%\\addtolength{\\topmargin}{-2.54cm}")
+ '(org-mode-hook
+   '(#[0 "\300\301\302\303\304$\207"
+	 [add-hook change-major-mode-hook org-fold-show-all append local]
+	 5]
+     #[0 "\300\301\302\303\304$\207"
+	 [add-hook change-major-mode-hook org-babel-show-result-all append local]
+	 5]
+     org-babel-result-hide-spec org-babel-hide-all-hashes
+     #[0 "\301\211\20\207"
+	 [imenu-create-index-function org-imenu-get-tree]
+	 2]
+     org-eldoc-load org-modern-mode))
  '(org-support-shift-select 'always)
  '(package-selected-packages
    '(latex-table-wizard async which-key eat editorconfig crdt org-contrib markdown-mode auctex rust-mode haskell-mode magit corfu consult vertico))
  '(pdf-view-continuous nil)
- '(preview-TeX-style-dir "/home/Stripetail/.emacs.d/elpa/auctex-13.3.0/latex")
+ '(pixel-scroll-precision-interpolate-page t)
+ '(powerline-gui-use-vcs-glyph t)
+ '(powerline-height 3)
+ '(preview-TeX-style-dir "/home/Stripetail/.emacs.d/elpa/auctex-13.3.0/latex" t)
  '(preview-auto-cache-preamble t)
  '(preview-scale-function 0.5)
  '(pyvenv-virtualenvwrapper-python "~/.local/bin/ipython3")
  '(rainbow-delimiters-max-face-count 8)
  '(rainbow-identifiers-face-count 8)
+ '(recentf-mode t)
  '(safe-local-variable-values '((TeX-master . TeX-master:)))
  '(solaire-global-mode t)
  '(solaire-global-mode-hook
    '(solaire-mode-swap-faces-maybe solaire-mode-fix-minibuffer))
+ '(tool-bar-mode nil)
  '(vertico-posframe-mode t)
  '(warning-suppress-log-types
    '(((copilot copilot-no-mode-indent))
@@ -88,15 +112,17 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(default ((t (:family "Hasklug Nerd Font Mono" :foundry "ADBO" :slant normal :weight medium :height 143 :width normal))))
  '(fringe ((t :background "#121212")))
  '(header-line ((t :box (:line-width 4 :color "#434c5e" :style nil))))
  '(header-line-highlight ((t :box (:color "white smoke"))))
  '(keycast-key ((t)))
  '(line-number ((t :background "gray20")))
- '(mode-line ((t :box (:line-width 6 :color "#4c566a" :style nil))))
+ '(mode-line ((t (:background "#4c566a" :foreground "#d8dee9" :box (:line-width (6 . 6) :color "#4c566a") :height 1.1 :width normal))))
  '(mode-line-active ((t :box (:line-width 6 :color "gray30" :style nil))))
  '(mode-line-highlight ((t :box (:color "#d8dee9"))))
  '(mode-line-inactive ((t :box (:line-width 6 :color "#2e3440" :style nil))))
+ '(powerline-active0 ((t (:inherit mode-line :height 1.0))))
  '(rainbow-delimiters-base-error-face ((t (:inherit rainbow-delimiters-base-face :foreground "#BF616A"))))
  '(rainbow-delimiters-depth-2-face ((t (:foreground "#B48EAD"))))
  '(rainbow-delimiters-depth-3-face ((t (:foreground "#88C0D0"))))
@@ -419,10 +445,10 @@ cleared, make sure the overlay doesn't come back too soon."
 (setq jit-lock-defer-time 0)
 (setq mouse-wheel-progressive-speed nil)
 
-
+;;(setq chatgpt-shell-openai-key "sk-/.../")
 (defun fix-gpt-key ()
   (interactive)
-(setq chatgpt-shell-openai-key ""))
+(setq chatgpt-shell-openai-key "sk-/.../"))
 (defun wrap-with-delimiters (begin-delimiter end-delimiter &optional arg)
   (interactive "sBegin delimiter: \nsEnd delimiter: \nP")
   (let ((beg (if (region-active-p) (region-beginning) (point)))
@@ -457,23 +483,31 @@ cleared, make sure the overlay doesn't come back too soon."
 
 (setq dashboard-items '((recents   . 7)
                         (bookmarks . 5)
-                        (projects  . 5)
-                        (agenda    . 5)
-                        (registers . 5)))
+                        (agenda    . 5)))
 
-(setq dashboard-display-icons-p t) ;; display icons on both GUI and terminal
-(setq dashboard-icon-type 'nerd-icons) ;; use `nerd-icons' package
+(setq dashboard-display-icons-p t)     ; display icons on both GUI and terminal
+(setq dashboard-icon-type 'nerd-icons) ; use `nerd-icons' package
+
 (setq dashboard-set-heading-icons t)
 (setq dashboard-set-file-icons t)
+
+(dashboard-modify-heading-icons '((recents   . "nf-oct-book")
+                                  (bookmarks . "nf-oct-bookmark")
+				  (agenda    . "nf-oct-calendar")))
+
 (setq dashboard-set-navigator t)
 (setq dashboard-set-init-info t)
-(add-to-list 'dashboard-items '(agenda) t)
+
 (setq initial-buffer-choice (lambda () (get-buffer-create "*dashboard*")))
 (setq dashboard-image-banner-max-height 16) 
 
+(setq dashboard-startup-banner "/home/Stripetail/Downloads/Skunktail_S_256.webp")
+(setq fancy-splash-image "~/Downloads/Skunktail_S.png")
+
+
 (setq plstore-cache-passphrase-for-symmetric-encryption t)
 
-(setq org-gcal-client-id ""
+(setq org-gcal-client-id "/../.apps.googleusercontent.com"
       org-gcal-client-secret "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"
       org-gcal-fetch-file-alist '(("steven.harder@ucalgary.ca" .  "~/org/schedule.org"))
       )
@@ -485,14 +519,14 @@ cleared, make sure the overlay doesn't come back too soon."
 ;; Require ESS immediately after installation
 (require 'ess-site)
 
-(add-hook 'create-frame-hook
-	  (lambda (frame)
-	    (with-selected-frame frame
+(defun new-buffer-modes ()
 	      (cp-fix)
 	      (rainbow-delimiters-mode 1)
 	      (rainbow-identifiers-mode 1)
 	      (fix-gpt-key)
-	      (setq-default line-spacing 0.5))))
+	      (olivetti-mode 1)
+	      (fix-gpt-key)
+	      (wc-mode 1))
 	      
 	      
 	      
@@ -569,3 +603,4 @@ cleared, make sure the overlay doesn't come back too soon."
 	    (wc-mode)
 	    (jinx-mode)))
 	     
+		   
