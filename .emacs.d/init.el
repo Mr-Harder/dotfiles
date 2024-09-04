@@ -177,7 +177,7 @@
 ;;   :config
 ;;   (setq welcome-latitude 51.0509
 ;;         welcome-longitude -114.0774
-;;         welcome-dashboard-use-nerd-icons t
+;;         welcome-dashbard-use-nerd-icons t
 ;;         welcome-path-max-length 75
 ;;         welcome-min-left-padding 10
 ;;         welcome-image-file "~/Downloads/Skunktail_S.webp"
@@ -185,6 +185,9 @@
 ;;         welcome-image-height 275
 ;;         welcome-title "Welcome Emacser. Have a great day!")
 ;;   (welcome-create-welcome-hook))
+
+
+
 
 ;;; EditorConfig support
 (unless (package-installed-p 'editorconfig)
@@ -510,4 +513,31 @@
 ;;))
 
 
-(jinx-global-mode 1)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ;; Function to sort recentf-list by last accessed time	 ;;
+;; (defun sort-recentf-by-last-accessed ()			 ;;
+;;   "Sort `recentf-list' by last access time."			 ;;
+;;   (setq recentf-list						 ;;
+;;         (sort recentf-list					 ;;
+;;               (lambda (f1 f2)					 ;;
+;;                 (> (nth 5 (file-attributes f1))		 ;;
+;;                    (nth 5 (file-attributes f2)))))))		 ;;
+;; 								 ;;
+;; ;; Re-sort the recent files list whenever it's updated	 ;;
+;; (add-hook 'recentf-mode-hook #'sort-recentf-by-last-accessed) ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+
+
+
+(jinx-mode 1)
+(display-time-mode 1)
+(display-battery-mode 1)
+(olivetti-mode 1)
+
+(use-package treemacs-nerd-icons
+  :config
+  (treemacs-load-theme "nerd-icons"))
+
+
